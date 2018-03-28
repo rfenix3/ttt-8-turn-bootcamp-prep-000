@@ -23,8 +23,10 @@ end
 def move(board, index, value ="X")
   if (valid_move?(board, index))
     board[index] = value
+    return true
+  else
+    return false
   end
-  return board
 end
 
 def valid_move?(board, index)
