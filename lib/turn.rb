@@ -3,8 +3,11 @@ def turn(board)
   puts "Please enter 1-9:"
   user_input = gets.to_i
   index = input_to_index(user_input)
-  move(board, index, "X")
-  display_board(board)
+  if move(board, index, "X")
+    display_board(board)
+  else
+    turn(board)
+  end
 end
 
 def display_board(board)
