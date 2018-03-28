@@ -5,9 +5,8 @@ def turn(board)
   index = input_to_index(user_input)
   if move(board, index, "X")
     display_board(board)
-  else
-    turn(board)
   end
+  turn(board)
 end
 
 def display_board(board)
